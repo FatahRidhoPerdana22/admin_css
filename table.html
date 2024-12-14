@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="box-icon">
+          <div id="menu-btn" class="box-bars">
+            <i class="fas fa-bars"></i>
+          </div>
+          <select id="language" class="language">
+            <option disabled selected>Language</option>
+            <option value="en">English</option>
+            <option value="pt">Portugis</option>
+            <option value="ar">Arab</option>
+          </select>
+        </div>
+        <div class="box-navbar">
+          <label class="toggle" id="toggle">
+            <input type="checkbox" id="mode" />
+            <span class="slider">
+              <i class="fas fa-sun sun-icon"></i>
+              <!-- Sun icon -->
+              <i class="fas fa-moon moon-icon"></i>
+              <!-- Moon icon -->
+            </span>
+          </label>
+          <div class="box-user">
+            <i class="fas fa-user" id="user-btn"></i>
+          </div>
+          <div class="dropdown-menu" id="user-menu">
+            <ul>
+              <li>
+                <a href="#"><i class="fas fa-gears"></i>Settings</a>
+              </li>
+              <div class="devider"></div>
+              <li>
+                <a href="#"><i class="fas fa-user-edit"></i>Profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <aside id="sidebar" class="sidebar active">
+      <div class="logo">
+        <a href="">Admin.</a>
+        <div class="box-close">
+          <i id="close-btn" class="fas fa-xmark close-sidebar"></i>
+        </div>
+      </div>
+      <div class="container-sidebar">
+        <div class="menu-sidebar">
+          <a href="index.html" class="active"
+            ><i class="fas fa-home"></i>
+            <span data-translate="home">Home</span></a
+          >
+        </div>
+        <div class="menu-sidebar">
+          <a href="table.html"
+            ><i class="fas fa-list"></i>
+            <span data-translate="data_category">Data Kategori</span></a
+          >
+        </div>
+        <div class="menu-sidebar">
+          <a href="javascript:void(0)" class="has-submenu">
+            <i class="fas fa-folder-open"></i>
+            <span data-translate="data_product">Data Produk</span>
+            <i class="fas fa-chevron-down submenu-icon"></i>
+          </a>
+          <div class="submenu" id="submenu">
+            <a href="produk_a.html"><i class="fas fa-box"></i> Produk A</a>
+            <a href="produk_b.html"><i class="fas fa-box"></i> Produk B</a>
+          </div>
+        </div>
+        <div class="menu-sidebar">
+          <a href=""
+            ><i class="fas fa-users"></i>
+            <span data-translate="data_employees">Data Karyawan</span></a
+          >
+        </div>
+        <div class="menu-sidebar">
+          <a href=""
+            ><i class="fas fa-sign-out"></i>
+            <span data-translate="logout">Logout</span></a
+          >
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="container-content">
+        <div class="homepage">
+          <h3>Dashboard</h3>
+        </div>
+
+        <div class="body-content">
+          <div class="content form">
+            <h2 data-translate="registration_form">Registration Form</h2>
+
+            <form action="" class="">
+              <!-- Text Input -->
+              <label for="name" data-translate="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+              />
+
+              <!-- Email Input -->
+              <label for="email" data-translate="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                data-translate="placeholder_email"
+                required
+              />
+
+              <!-- Number Input -->
+              <label for="age" data-translate="age">Age</label>
+              <input
+                type="number"
+                id="age"
+                placeholder="Enter your age"
+                required
+              />
+
+              <!-- Color Input -->
+              <label for="color" data-translate="favorit_color"
+                >Favorite Color</label
+              >
+              <input type="color" id="color" />
+            </form>
+          </div>
+
+          <div class="content form">
+            <form action="">
+              <!-- Radio Button -->
+              <label data-translate="gender"></label>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="gender" value="male" />
+                  <span data-translate="male"></span>
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="female" />
+                  <span data-translate="female"></span>
+                </label>
+              </div>
+
+              <!-- Checkbox -->
+              <label data-translate="hobbies"></label>
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="hobby" value="reading" />
+                  <span data-translate="reading"></span>
+                </label>
+                <label>
+                  <input type="checkbox" name="hobby" value="traveling" />
+                  <span data-translate="traveling"></span>
+                </label>
+                <label>
+                  <input type="checkbox" name="hobby" value="coding" />
+                  <span data-translate="coding"></span>
+                </label>
+              </div>
+
+              <!-- Combo Box (Select Dropdown) -->
+              <label for="city" data-translate="city"></label>
+              <select id="city" required>
+                <option value="jakarta">Jakarta</option>
+                <option value="surabaya">Surabaya</option>
+                <option value="bandung">Bandung</option>
+              </select>
+
+              <!-- Toggle Switch -->
+              <label for="subscribe" data-translate="subscribe"></label>
+              <label class="toggle">
+                <input type="checkbox" id="subscribe" />
+                <span class="slider"></span>
+              </label>
+
+              <!-- Submit Button -->
+              <button type="submit" data-translate="submit"></button>
+            </form>
+          </div>
+        </div>
+
+        <div class="body-container">
+          <div class="table-container">
+            <button id="openFormBtn" class="btn">
+              <i class="fas fa-user-plus"></i> Tambah Data
+            </button>
+
+            <table>
+              <thead class="primary">
+                <tr>
+                  <th>No</th>
+                  <th>Nama 2</th>
+                  <th>No Telp 3</th>
+                  <th>Alamat 4</th>
+                  <th>Aksi 5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Data 2</td>
+                  <td>Data 3</td>
+                  <td>Data 4</td>
+                  <td>
+                    <a href="" class="btn-sm warning">Edit</a>
+                    <a href="" class="btn-sm danger">Hapus</a>
+                    <a href="" class="btn-sm primary">Detail</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Data 6</td>
+                  <td>Data 7</td>
+                  <td>Data 8</td>
+                  <td>Data 9</td>
+                  <td>Data 10</td>
+                </tr>
+                <tr>
+                  <td>Data 11</td>
+                  <td>Data 12</td>
+                  <td>Data 13</td>
+                  <td>Data 14</td>
+                  <td>Data 15</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+           <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tambah Data</h2>
+      <form>
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name" placeholder="Masukkan nama"><br><br>
+
+        <label for="phone">No Telp:</label><br>
+        <input type="text" id="phone" name="phone" placeholder="Masukkan nomor telepon"><br><br>
+
+        <label for="address">Alamat:</label><br>
+        <input type="text" id="address" name="address" placeholder="Masukkan alamat"><br><br>
+
+        <button type="submit" class="btn">Simpan</button>
+      </form>
+    </div>
+
+  </div>
+
+          <div class="table-container">
+            <table>
+              <thead class="primary">
+                <tr>
+                  <th>Header 1</th>
+                  <th>Header 2</th>
+                  <th>Header 3</th>
+                  <th>Header 4</th>
+                  <th>Header 5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Data 1</td>
+                  <td>Data 2</td>
+                  <td>Data 3</td>
+                  <td>Data 4</td>
+                  <td>Data 5</td>
+                </tr>
+                <tr>
+                  <td>Data 6</td>
+                  <td>Data 7</td>
+                  <td>Data 8</td>
+                  <td>Data 9</td>
+                  <td>Data 10</td>
+                </tr>
+                <tr>
+                  <td>Data 11</td>
+                  <td>Data 12</td>
+                  <td>Data 13</td>
+                  <td>Data 14</td>
+                  <td>Data 15</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>© 2024 MINUS (Mie Nusantara). All Rights Reserved.</footer>
+    <script src="index.js"></script>
+    <script>
+      
+
+var modal = document.getElementById("myModal");
+    var btn = document.getElementById("openFormBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+  </body>
+</html>
